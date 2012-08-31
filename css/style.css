@@ -1,0 +1,147 @@
+body {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+	text-align: center; 
+	background: #FEFEFE url("../img/patterns/1337.png");
+	width: 100%; height: 100%;
+	color: #000;
+}
+
+#container {
+	width: inherit; height: inherit;
+	margin: 0 auto;
+}
+
+header {
+    background-color: #0E0E0E;
+    overflow: hidden;
+}
+
+	#link-logout, #link-login {
+		float: right;
+		margin: 5px 20px 5px 5px;
+		display: block;
+		color: #FFF;
+	}
+		
+		#link-logout a, #link-login a {	text-decoration: none; color: #DDD;	}
+		#link-logout a:hover, #link-login a:hover { color: #FFF; }
+
+	.questao {
+        text-align: left;
+    	margin: 5px;
+		border: solid 2px #FFD300;
+		background: #FFE773;
+		padding: 1px;
+	}
+
+        .questao li {
+            margin: 2px;
+        }
+
+        .questao .alternativa input { margin-bottom: 7px; }
+
+        .questao .resposta_correta { background-color: #2eff00; }
+        .questao .resposta_errada { background-color: #fd0000; }
+
+#table-selec-qst {
+    border: solid 1px #000;
+
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+
+    margin: 5px;
+    width: 100%;
+
+    background: rgba(140, 140, 140, 0.5);
+}
+
+    #table-selec-qst td, #table-selec-qst tr {
+        border: solid 1px #6b6b6b;
+    }
+
+option {
+    width: 50px;
+}
+
+/* --- Login + Register --- */
+
+#login,
+#register {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+
+    background: rgba(140, 140, 140, 0.5);
+    border: solid 1px #000;
+
+	text-align: center;
+	overflow: visible;
+	margin: 10% auto 0;
+}
+
+#login input:not([type="image"]),
+#registerinput:not([type="image"]) {
+    width:300px;
+}
+
+#login { width: 400px; }
+#register { width: 470px; }
+
+#login button,
+#register button {
+	margin-bottom: 10px;
+}
+
+#login .uniForm .ctrlHolder,
+#register .uniForm .ctrlHolder {
+	padding: 10px;
+}
+
+#login .uniForm .ctrlHolder label,
+#login .uniForm .ctrlHolder input,
+#register .uniForm .ctrlHolder label,
+#register .uniForm .ctrlHolder input {
+	display:inline;
+} 
+
+#login .uniForm .ctrlHolder label,
+#register .uniForm .ctrlHolder label { 
+	text-align: left;
+	float: left;
+	margin: 10px 10px 0 0;
+	vertical-align: middle;
+}
+
+#login .uniForm .ctrlHolder input,
+#register .uniForm .ctrlHolder input {
+	float: right;
+	/*width: 300px;*/
+}
+
+.comentarios {
+    border: solid 1px #000;
+}
+
+    .comentarios_titulo {
+        background-color: #000;
+        color: #FFF;
+        width: inherit;
+        border-bottom: solid 1px #000;
+    }
+
+    .comentarios_conteudo {
+        background: rgba(140, 140, 140, 0.5);
+    }
+
+        .comentario {
+            background: rgba(140, 140, 140, 0.5);
+        }
+
+            .comentario_conteudo {
+                background: #FFF;
+            }
+
+    .comentarios form label { display: block; align: left; }
+    .comentarios textarea { height: 100%; }
