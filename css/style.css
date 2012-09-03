@@ -8,10 +8,11 @@ body {
 	background: #FEFEFE url("../img/patterns/1337.png");
 	width: 100%; height: 100%;
 	color: #000;
+    margin: 0; padding: 0;
 }
 
 #container {
-	width: inherit; height: inherit;
+	width: 1260px; height: inherit;
 	margin: 0 auto;
 }
 
@@ -65,20 +66,37 @@ header {
     line-height: 16px;
 
     margin: 5px;
-    width: 100%;
+/*    width: 100%;*/
+    width: auto;
 
 /*    background: rgba(140, 140, 140, 0.5);*/
     background-color: #EEEEEE;
-    color: #444444
 }
 
     #table-selec-qst td, #table-selec-qst tr {
 /*        border: solid 1px #6b6b6b;*/
-        border: 1px solid #BDBDBD;
+/*        border: 1px solid #BDBDBD;*/
 /*        border-top: 1px solid #FFFFFF;*/
 /*        border-bottom: 1px solid #E0E0E0;*/
 /*        color: #32a2e7;*/
     }
+
+            #table-selec-qst td select, #table-selec-qst tr select {
+                border: 1px solid #BDBDBD;
+                width: 200px;
+                height: 30px;
+                margin: 5px;
+            }
+
+            #div-TAI {
+                font-size: 14px;
+                line-height: 30px;
+/*                border: 1px solid #BDBDBD;*/
+            }
+
+            #table-selec-qst td input, #table-selec-qst tr input {
+                margin-bottom: 5px;
+            }
 
 option {
     width: 50px;
