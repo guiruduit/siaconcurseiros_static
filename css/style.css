@@ -1,6 +1,9 @@
 body {
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 14px;
+/*    font-family: Arial, sans-serif;*/
+/*    font-weight: bold;*/
+    line-height: 18px;
+    font-size: 12px;
 	text-align: center; 
 	background: #FEFEFE url("../img/patterns/1337.png");
 	width: 100%; height: 100%;
@@ -13,17 +16,25 @@ body {
 }
 
 header {
-    background-color: #0E0E0E;
+/*    background-color: #0E0E0E;*/
+    background-color: #444444;
     overflow: hidden;
+    border: 1px solid #222222;
 }
+
+    #descricao {
+        float: left;
+        margin: 5px 5px 5px 5px;
+        color: #FFF;
+    }
 
 	#link-logout, #link-login {
 		float: right;
-		margin: 5px 20px 5px 5px;
+		margin: 5px 5px 5px 5px;
 		display: block;
 		color: #FFF;
 	}
-		
+
 		#link-logout a, #link-login a {	text-decoration: none; color: #DDD;	}
 		#link-logout a:hover, #link-login a:hover { color: #FFF; }
 
@@ -51,19 +62,34 @@ header {
     -moz-border-radius: 5px;
     border-radius: 5px;
 
+    line-height: 16px;
+
     margin: 5px;
     width: 100%;
 
-    background: rgba(140, 140, 140, 0.5);
+/*    background: rgba(140, 140, 140, 0.5);*/
+    background-color: #EEEEEE;
+    color: #444444
 }
 
     #table-selec-qst td, #table-selec-qst tr {
-        border: solid 1px #6b6b6b;
+/*        border: solid 1px #6b6b6b;*/
+        border: 1px solid #BDBDBD;
+/*        border-top: 1px solid #FFFFFF;*/
+/*        border-bottom: 1px solid #E0E0E0;*/
+/*        color: #32a2e7;*/
     }
 
 option {
     width: 50px;
 }
+
+#aviso {
+    background-color: #f57900;
+    line-height: 20px;
+}
+
+    #aviso td { color: #000; }
 
 /* --- Login + Register --- */
 

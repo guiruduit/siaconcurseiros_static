@@ -55,6 +55,14 @@ function dismissRelatedLookupPopup(win, chosenId) {
     win.close();
 }
 
+// GRAPPELLI CUSTOM
+function removeRelatedObject(triggeringLink) {
+    var id = triggeringLink.id.replace(/^remove_/, '');
+    var elem = document.getElementById(id);
+    elem.value = "";
+    elem.focus();
+}
+
 function showAddAnotherPopup(triggeringLink) {
     var name = triggeringLink.id.replace(/^add_/, '');
     name = id_to_windowname(name);
@@ -85,8 +93,10 @@ function dismissAddAnotherPopup(win, newId, newRepr) {
         } else if (elem.nodeName == 'INPUT') {
             if (elem.className.indexOf('vManyToManyRawIdAdminField') != -1 && elem.value) {
                 elem.value += ',' + newId;
+                elem.focus();
             } else {
                 elem.value = newId;
+                elem.focus();
             }
         // GRAPPELLI CUSTOM
         // NOTE: via http://code.djangoproject.com/ticket/10191
@@ -121,11 +131,49 @@ function dismissAddAnotherPopup(win, newId, newRepr) {
             elem.appendChild(newLi);
         }
     } else {
+        // might be a SelectBox
         var toId = name + "_to";
         elem = document.getElementById(toId);
-        var o = new Option(newRepr, newId);
-        SelectBox.add_to_cache(toId, o);
-        SelectBox.redisplay(toId);
+        
+        // GRAPPELLI CUSTOM
+        // SelectBox code isn't customized, but CheckboxSelectMultiple doesn't exist in the original
+        if (elem) {
+            // It is a select box
+            var o = new Option(newRepr, newId);
+            SelectBox.add_to_cache(toId, o);
+            SelectBox.redisplay(toId);
+        } else {
+            // last chance. might be a CheckboxSelectMultiple
+            // get the list of checkboxes
+            var list = document.getElementById(name + "_0").parentNode.parentNode.parentNode;
+            var inputId = name + '_' + list.childNodes.length;
+            var newText = document.createTextNode(' '+newRepr);
+            
+            // create a new list item with a checkbox and label in it
+            var newInput = document.createElement('input');
+            newInput.setAttribute('type', 'checkbox');
+            newInput.setAttribute('name', name);
+            newInput.setAttribute('value', newId);
+            newInput.setAttribute('id', inputId);
+            newInput.setAttribute('checked', 'checked');
+            
+            var newLabel = document.createElement('label');
+            newLabel.setAttribute('for', inputId);
+            
+            newLabel.appendChild(newInput);
+            
+            if (newRepr.charAt(0) == '<' && newRepr.charAt(newRepr.length-1) == '>') {
+                newLabel.innerHTML += newRepr;
+            } else {
+                newLabel.appendChild(newText);
+            }
+            
+            var newLi = document.createElement('li');
+            newLi.appendChild(newLabel);
+            
+            // append the new list item to the list
+            list.appendChild(newLi);
+        }
     }
     win.close();
 }
