@@ -12,7 +12,7 @@ body {
 }
 
 #container {
-	width: 1260px; height: inherit;
+	width: 1272px; height: inherit;
 	margin: 0 auto;
 }
 
@@ -22,6 +22,21 @@ header {
     overflow: hidden;
     border: 1px solid #222222;
 }
+
+    #a-logo {
+        text-decoration: none;
+        font-family: inherit;
+        color: inherit;
+        line-height: inherit;
+        font-size: inherit;
+    }
+
+    #a-feedback {
+        color: #f57900;
+        text-decoration: none;
+        font-weight: bold;
+
+    }
 
     #descricao {
         float: left;
@@ -41,35 +56,63 @@ header {
 
 	.questao {
         text-align: left;
-    	margin: 5px;
+    	margin: 5px; margin-bottom: 0px;
 		border: solid 2px #FFD300;
 		background: #FFE773;
 		padding: 1px;
+        color: #000;
 	}
 
         .questao li {
             margin: 2px;
+            list-style-type: none;
+            list-style-position: inside;
         }
 
-        .questao .alternativa input { margin-bottom: 7px; }
+        .questao li label { color: #000; }
+
+        .questao .alternativa * { display: inline; color: #000; font-color: }
+
+        .questao .alternativa input { margin-bottom: 7px; display: inline; }
+
+        .questao .alternativa span { display: inline; color: #000;}
 
         .questao .resposta_correta { background-color: #2eff00; }
         .questao .resposta_errada { background-color: #fd0000; }
 
+    .comentarios {
+        border: solid 1px #000;
+        margin: 5px;
+        margin-top: 0px;
+    }
+
+        .comentarios_titulo {
+            background-color: #000;
+            color: #FFF;
+            width: inherit;
+            border-bottom: solid 1px #000;
+        }
+
+        .comentarios_conteudo {
+            background: rgba(140, 140, 140, 0.5);
+        }
+
+            .comentario {
+                background: rgba(140, 140, 140, 0.5);
+            }
+
+                .comentario_conteudo {
+                    background: #FFF;
+                }
+
+        .comentarios form label { display: block; align: left; }
+        .comentarios textarea { height: 100%; }
+
 #table-selec-qst {
     border: solid 1px #000;
-
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-
     line-height: 16px;
-
     margin: 5px;
-/*    width: 100%;*/
     width: auto;
-
-/*    background: rgba(140, 140, 140, 0.5);*/
     background-color: #EEEEEE;
 }
 
@@ -98,6 +141,44 @@ header {
                 margin-bottom: 5px;
             }
 
+#container2 {
+	width: 900px; height: inherit;
+	margin: 0 auto;
+}
+
+#table-val-tcc {
+    border: solid 1px #000;
+    line-height: 16px;
+    margin: 5px;
+    width: auto;
+    background-color: #EEEEEE;
+}
+
+    #table-val-tcc td {
+        border: 1px solid #000;
+    }
+
+    #table-val-tcc .qst td {
+        border: 1px solid #BDBDBD;
+        border-top: solid 1px #000;
+        border-right: solid 1px #000;
+        border-left: solid 1px #000;
+        text-align: left;
+    }
+
+    #table-val-tcc tr td label {
+        margin: 5px;
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    #table-val-tcc tr td select {
+        border: 1px solid #BDBDBD;
+        width: 200px;
+        height: 30px;
+        margin: 5px;
+    }
+
 option {
     width: 50px;
 }
@@ -113,16 +194,25 @@ option {
 
 #login,
 #register {
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
+/*	-webkit-border-radius: 5px;*/
+/*	-moz-border-radius: 5px;*/
+/*	border-radius: 5px;*/
 
-    background: rgba(140, 140, 140, 0.5);
+
+/*    background: rgba(140, 140, 140, 0.5);*/
+    background-color: #EEEEEE;
     border: solid 1px #000;
 
 	text-align: center;
 	overflow: visible;
 	margin: 10% auto 0;
+}
+
+#login .uniForm a,
+#register .uniForm a {
+    display: block;
+    margin-bottom: 10px;
+    text-decoration: none;
 }
 
 #login input:not([type="image"]),
@@ -135,19 +225,19 @@ option {
 
 #login button,
 #register button {
-	margin-bottom: 10px;
+	margin-bottom: 5px;
 }
 
 #login .uniForm .ctrlHolder,
 #register .uniForm .ctrlHolder {
-	padding: 10px;
+/*	padding: 10px;*/
 }
 
 #login .uniForm .ctrlHolder label,
 #login .uniForm .ctrlHolder input,
 #register .uniForm .ctrlHolder label,
 #register .uniForm .ctrlHolder input {
-	display:inline;
+/*	display:inline;*/
 } 
 
 #login .uniForm .ctrlHolder label,
@@ -161,31 +251,9 @@ option {
 #login .uniForm .ctrlHolder input,
 #register .uniForm .ctrlHolder input {
 	float: right;
-	/*width: 300px;*/
+	width: 300px;
 }
 
-.comentarios {
-    border: solid 1px #000;
-}
+.Apple-style-span { color: #000; }
 
-    .comentarios_titulo {
-        background-color: #000;
-        color: #FFF;
-        width: inherit;
-        border-bottom: solid 1px #000;
-    }
-
-    .comentarios_conteudo {
-        background: rgba(140, 140, 140, 0.5);
-    }
-
-        .comentario {
-            background: rgba(140, 140, 140, 0.5);
-        }
-
-            .comentario_conteudo {
-                background: #FFF;
-            }
-
-    .comentarios form label { display: block; align: left; }
-    .comentarios textarea { height: 100%; }
+span { color: #000; }
