@@ -16,6 +16,15 @@ body {
 	margin: 0 auto;
 }
 
+.titulo-1 {
+    text-align: center;
+    line-height: 20px;
+    width: auto;
+    background-color: #EEEEEE;
+    margin: 5px;
+    font-size: 14px;
+}
+
 header {
 /*    background-color: #0E0E0E;*/
     background-color: #444444;
