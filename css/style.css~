@@ -19,7 +19,7 @@ body {
 .titulo-1 {
     text-align: center;
     line-height: 20px;
-    width: inherit;
+    width: auto;
     background-color: #EEEEEE;
     margin: 5px;
     font-size: 14px;
@@ -173,6 +173,29 @@ header {
         border-right: solid 1px #000;
         border-left: solid 1px #000;
         text-align: left;
+    }
+
+    #table-val-tcc .val-textarea td {
+
+
+        border-right: solid 1px #000;
+        border-left: solid 1px #000;
+        text-align: left;
+    }
+
+    #table-val-tcc .val-textarea td label {
+        display: block;
+        margin: 5px;
+    }
+
+    #table-val-tcc .val-textarea td textarea {
+        width: 820px;
+        height: 300px;
+        margin: 5px;
+    }
+
+    #div-submit input {
+        margin: 5px;
     }
 
     #table-val-tcc tr td label {
